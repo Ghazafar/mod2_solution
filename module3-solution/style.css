@@ -1,5 +1,4 @@
 /* Elements Styles */ 
-
 *body {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
@@ -89,8 +88,6 @@
     font-size: 2rem;
     word-spacing: 0.5px;
   }
-
-
 
   p {
     color: rgb(0, 0, 0);
