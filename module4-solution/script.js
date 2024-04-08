@@ -1,17 +1,22 @@
-// Define an array of names
-var names = ["Jan", "Jane", "Jack", "Jano", "Ghazanfar", "Alice", "Bob"];
+var $dc = {}; // Define the namespace if not already defined
 
-// Loop over each name in the array
-for (var i = 0; i < names.length; i++) {
-    // Get the current name
-    var name = names[i];
-    
-    // Check if the name starts with 'j' or 'J'
-    if (name.charAt(0) === 'j' || name.charAt(0) === 'J') {
-        // If yes, print "Goodbye" followed by the name
-        console.log("Goodbye " + name);
-    } else {
-        // If no, print "Hello" followed by the name
-        console.log("Hello " + name);
-    }
-}
+$dc.loadRandomMenuCategory = function() {
+    // Array of available categories (replace this with your actual list of categories)
+    var categories = ["Lunch", "Dinner", "Sushi", "Breakfast", "Drinks"];
+
+    // Generate a random index to select a category from the array
+    var randomIndex = Math.floor(Math.random() * categories.length);
+
+    // Get the short_name of the randomly selected category
+    var randomCategoryShortName = categories[randomIndex]; // Assuming short_name matches category names
+
+    // Load menu items for the random category
+    $dc.loadMenuItems(randomCategoryShortName);
+};
+
+// Mock function, replace this with your actual function to load menu items
+$dc.loadMenuItems = function(categoryShortName) {
+    // Here you would implement the logic to load menu items for the given category
+    // This is just a mock function, replace it with your actual implementation
+    console.log("Loading menu items for category: " + categoryShortName);
+};
